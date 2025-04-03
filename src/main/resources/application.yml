@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: tasks
+  datasource:
+    url: jdbc:postgresql://ep-sparkling-flower-a2qud523-pooler.eu-central-1.aws.neon.tech/task?sslmode=require
+    username: neondb_owner
+    password: npg_yo2UsvP0qiHD
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
