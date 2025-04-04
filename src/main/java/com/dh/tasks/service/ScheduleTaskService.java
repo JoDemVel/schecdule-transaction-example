@@ -17,7 +17,7 @@ public class ScheduleTaskService {
 
     private final CommandFactory commandFactory;
 
-    @Scheduled(cron = "0 */10 * * * *")
+    @Scheduled(cron = "0 */5 * * * *")
     public void fillTransactionHistory() {
         TransactionDayReadCmd readCmd = commandFactory.createInstance(TransactionDayReadCmd.class);
         readCmd.setPageable(PageRequest.of(0, Integer.MAX_VALUE));
